@@ -7,6 +7,9 @@ class ATM:
     def show_balanc(self):
         print(self.balanc)
     
+    def Deposit(self, amount):
+        self.balanc += amount
+        print(f'You Deposit {amount} curent balanc {self.balanc}')
 
 atm1 = ATM()
-atm1.show_balanc()
+atm1.Deposit(100)
