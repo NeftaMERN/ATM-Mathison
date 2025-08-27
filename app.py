@@ -53,4 +53,6 @@ class ATM:
             print("Wrong account number or PIN! Access denied.")
 
 atm1 = ATM(balance=500, PIN="9999", account_number="123456")
+atm2 = ATM(balance=100, PIN="2323", account_number="232343")
 atm1.authenticate()
+atm2.authenticate()
