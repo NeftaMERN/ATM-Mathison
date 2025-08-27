@@ -1,8 +1,10 @@
 
 class ATM:
 
-    def __init__(self, balance=100):
+    def __init__(self, balance=100, PIN=1234, account_number = 1111):
         self.balance = balance
+        self.PIN = PIN
+        self.account_number = account_number
     
     def show_balance(self):
         print(f'Curent balance {self.balance}')
@@ -39,6 +41,16 @@ class ATM:
                 break
             else:
                 print("Invalid choice, try again.")
+    
+    def authenticate(self):
+        entered_acc = input('Enter account number: ')
+        entered_pin = input('Enter PIN: ')
 
-atm1 = ATM()
-atm1.manu()
+        if entered_acc == self.account_number and entered_pin == self.PIN:
+            print('Login successful')
+            self.manu()
+        else:
+            print("Wrong account number or PIN! Access denied.")
+
+atm1 = ATM(balance=500, PIN="9999", account_number="123456")
+atm1.authenticate()
