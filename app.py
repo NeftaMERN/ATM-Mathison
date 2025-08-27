@@ -1,23 +1,23 @@
 
 class ATM:
 
-    def __init__(self, balanc=100):
-        self.balanc = balanc
+    def __init__(self, balance=100):
+        self.balance = balance
     
-    def show_balanc(self):
-        print(f'Curent balanc {self.balanc}')
+    def show_balance(self):
+        print(f'Curent balance {self.balance}')
     
-    def Deposit(self, amount=None):
+    def deposit(self, amount=None):
         if amount is None:
             amount = int(input('Enter amount: '))
-        self.balanc += amount
-        print(f'You Deposit {amount} curent balanc {self.balanc}')
+        self.balance += amount
+        print(f'You Deposit {amount} curent balanc {self.balance}')
     
     def withdraw(self, amount=None):
         if amount is None:
             amount = int(input('Enter amount: '))
-        self.balanc -= amount
-        print(f'You withdraw {amount}, Curent balance {self.balanc}')
+        self.balance -= amount
+        print(f'You withdraw {amount}, Curent balance {self.balance}')
 
     def manu(self):
         while True:
@@ -41,4 +41,4 @@ class ATM:
                 print("Invalid choice, try again.")
 
 atm1 = ATM()
-atm1.menu()
+atm1.manu()
